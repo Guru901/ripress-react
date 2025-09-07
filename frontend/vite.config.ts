@@ -10,7 +10,6 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/health": "http://localhost:3000",
       "/hello": "http://localhost:3000",
     },
   },

@@ -30,8 +30,7 @@ cargo run
 
 - Endpoints:
 
-  - GET `/health` → `{ "status": "ok" }`
-  - GET `/hello` → `{ "message": "Hello, world!" }`
+  - GET `/hello` → `"Hello from Ripress!"`
 
 - Static files: serves `./dist/` at `/`.
 
