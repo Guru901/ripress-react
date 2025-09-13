@@ -1,8 +1,8 @@
 [package]
-name = "rust-react"
+name = "ripress-react-minimal-demo"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ripress = { version = "*" }
+ripress = "*"
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
