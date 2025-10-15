@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function App() {
-  const [hello, setHello] = useState<any>(null);
+  const [hello, setHello] = useState<string>("");
 
   useEffect(() => {
     (async () => {
@@ -11,7 +11,7 @@ function App() {
         throw new Error("Failed to fetch");
       }
 
-      const data = await response.json();
+      const data = await response.text();
 
       setHello(data);
     })();
@@ -22,7 +22,7 @@ function App() {
       <h1>Ripress + React minimal demo</h1>
       <div>
         <h2>/hello</h2>
-        <pre>{hello ? JSON.stringify(hello, null, 2) : "Loading..."}</pre>
+        <pre>{hello ?? "Loading..."}</pre>
       </div>
     </div>
   );
